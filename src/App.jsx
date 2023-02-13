@@ -1,48 +1,13 @@
-import React, { Component } from "react";
-import uniqid from 'uniqid'
+import { useState } from "react";
+import Field from "./Components/Field";
 
-class App extends Component {
-  constructor(props){
-    super(props)
+function App() {
 
-    this.state = {
-      Edit: true,
-      text: ''
-    }
-  }
-
-  Submit = () => {
-      this.setState({
-        Edit: false
-      })
-    console.log(this.state.Edit)
-  }
-
-  Edit = () => {
-    this.setState({
-      Edit: true
-    })
-  console.log(this.state.Edit)
+  return (
+    <>
+      <Field/>
+    </>
+  );
 }
 
-  handleInput = e => {
-    this.setState({
-      text: e.target.value
-    })
-  }
-
-  handleEdit = () => {
-
-  }
- 
-  render(){
-    
-    return(
-      <>
-        
-      </>
-    )
-  }
-}
-
-export default App
+export default App;
